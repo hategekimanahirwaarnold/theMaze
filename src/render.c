@@ -10,7 +10,7 @@
  * @x: number of ray casted
  * @side: determines whether wall is N/S or E/W
  * @textured: True if user enabled textures, otherwise False
- * Return: oid
+ * Return: None
  */
 void show_walls(int *maze, SDL_Point map, point_t rayPos, point_t rayDir, double distToWall, int x, int side, bool textured)
 {
