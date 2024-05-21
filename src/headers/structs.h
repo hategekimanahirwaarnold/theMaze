@@ -13,4 +13,21 @@ typedef struct point_s
 	double y;
 } point_t;
 
+typedef struct particle_s
+{
+	double y;
+	double x;
+	double height;
+	double gravity;
+	void (*draw)(struct particle_s*);
+} Particle;
+
+typedef struct rain_s
+{
+	bool fall;
+	bool pressed;
+	Particle particles[PARTICLES_COUNT];
+	void (*update)(struct rain_s);
+} Rain;
+
 #endif /* STRUCTS_H */

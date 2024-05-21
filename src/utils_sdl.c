@@ -73,7 +73,7 @@ void updateRenderer(bool textured)
 			}
 		}
 	}
-
+	rain_update();
 	/* update screen */
 	SDL_RenderPresent(renderer);
 }

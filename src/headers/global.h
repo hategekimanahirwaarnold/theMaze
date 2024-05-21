@@ -10,5 +10,6 @@ extern point_t pos;
 extern point_t dir;
 extern point_t plane;
 extern double currentTime;
+extern Rain rain;
 
 #endif /* GLOBAL_H */

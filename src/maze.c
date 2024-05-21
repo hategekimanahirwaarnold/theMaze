@@ -9,7 +9,7 @@ point_t pos;
 point_t dir;
 point_t plane;
 double currentTime;
-
+Rain rain;
 
 /**
  * main - main function
@@ -33,6 +33,8 @@ int main(int argc, char *argv[])
 	mapName = "\0";
 
 	textured = true;
+	rain_constructor();
+
 	if (argc == 3)
 	{
 		if (strcmp(argv[2], "no_texture") == 0)
@@ -70,6 +72,7 @@ int main(int argc, char *argv[])
 		if (!textured)
 			show_flat_background();
 
+		rain_update();
 		cast_ray(maze, textured);
 
 		handle_inputs(maze);

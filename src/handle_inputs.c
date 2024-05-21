@@ -86,6 +86,17 @@ void handle_inputs(int *maze)
 		plane.x = plane.x * cos(-rotateSpeed) - plane.y * sin(-rotateSpeed);
 		plane.y = oldPlaneX * sin(-rotateSpeed) + plane.y * cos(-rotateSpeed);
 	}
+	/*
+	  make it rain
+	if (keystate[SDL_SCANCODE_R])
+	{
+		if (!rain.pressed)
+		{
+			rain.fall = !rain.fall;
+			rain.pressed = true;
+		}
+	}
+	*/
 }
 
 /**
@@ -116,6 +127,18 @@ bool quit(void)
 			else
 				SDL_SetWindowFullscreen(window, SDL_WINDOW_FULLSCREEN);
 		}
+
+		/* toggle rain per event*/
+		if (event.type == SDL_KEYDOWN && event.key.keysym.sym == SDLK_r)
+		{
+			if (!rain.pressed)
+			{
+				rain.fall = !rain.fall;
+				rain.pressed = true;
+			}
+		}
+		if (event.type != SDL_KEYDOWN)
+			rain.pressed = false;
 	}
 
 	return (quit);

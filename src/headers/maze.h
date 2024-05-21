@@ -9,11 +9,13 @@
 #define MAP_WIDTH 24
 #define MAP_HEIGHT 24
 #define MAP_CHAR_COUNT 1275
+#define PARTICLES_COUNT 1000
 
 #include <SDL2/SDL.h>
 #include <SDL2/SDL_image.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <time.h>
 #include <stdbool.h>
 #include <stdint.h>
 #include <string.h>
@@ -39,5 +41,8 @@ void show_walls(int *maze, SDL_Point map, point_t rayPos, point_t rayDir,
 void show_flat_background(void);
 void show_textured_background(SDL_Point map, point_t rayDir, double distToWall,
 					double wallX, int drawEnd, int x, int side);
+
+void rain_constructor();
+void rain_update();
 
 #endif /* MAZE_H */
