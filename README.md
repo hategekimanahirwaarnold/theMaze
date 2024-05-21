@@ -1,7 +1,7 @@
 # 3D Maze
 ### Creating a 3D maze with raycasting
 
-I'm thrilled to share one my latest interesting project, "maze"! 🎮
+I'm excited to share one my latest interesting project, "maze"! 🎮
 
 Why "maze," you ask? Well, let me share a little story behind its creation. When I sat down to brainstorm my next project, I wanted to challenge myself and create something truly immersive. That's when the idea of creating maze with SDL2 and raycasting technology struck me.
 
@@ -15,6 +15,17 @@ I invite you to step into the world of "maze" and experience the thrill of explo
 - Compile with `gcc` using Makefile:
     `make -f Makefile`
 - Run the maze: `./maze` or `./maze maps/<map_name>`
+
+#### Key Controls
+- `A` : rotate camera left
+- `D` : rotate camera right
+- `W` : move forward
+- `S` : move backward
+- `Q` : strafe left
+- `E` : strafe right
+- `F` : toggle fullscreen
+- `R` : toggle rain
+- `ESC` : quit
 
 ### Resources
 - [SDL2 API](https://wiki.libsdl.org/CategoryAPI)
