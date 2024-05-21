@@ -72,7 +72,6 @@ int main(int argc, char *argv[])
 		if (!textured)
 			show_flat_background();
 
-		rain_update();
 		cast_ray(maze, textured);
 
 		handle_inputs(maze);

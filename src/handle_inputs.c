@@ -86,17 +86,6 @@ void handle_inputs(int *maze)
 		plane.x = plane.x * cos(-rotateSpeed) - plane.y * sin(-rotateSpeed);
 		plane.y = oldPlaneX * sin(-rotateSpeed) + plane.y * cos(-rotateSpeed);
 	}
-	/*
-	  make it rain
-	if (keystate[SDL_SCANCODE_R])
-	{
-		if (!rain.pressed)
-		{
-			rain.fall = !rain.fall;
-			rain.pressed = true;
-		}
-	}
-	*/
 }
 
 /**
@@ -137,6 +126,7 @@ bool quit(void)
 				rain.pressed = true;
 			}
 		}
+		/* stop rain on key up*/
 		if (event.type != SDL_KEYDOWN)
 			rain.pressed = false;
 	}
